@@ -4,8 +4,18 @@
   become: true
 
   tasks:
-  - name: install packages
-    package:
+  - name: Install core packages
+    ansible.builtin.package:
+      name:
+        - git
+        - stow
+      state: latest
+      update_cache: yes
+
+  - name: Install packages
+    ansible.builtin.package:
       name:
         - htop
         - tmux
+      state: latest
+      update_cache: yes
