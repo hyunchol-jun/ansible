@@ -19,3 +19,10 @@
         - tmux
       state: latest
       update_cache: yes
+
+  - name: Clone dotfiles to home directory
+    ansible.builtin.git:
+      repo: "https://github.com/hyunchol-jun/.dotfiles.git"
+      dest: "/home/joseph/.dotfiles"
+      clone: yes
+      update: yes
