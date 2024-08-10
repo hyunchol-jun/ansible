@@ -24,7 +24,7 @@
     ansible.builtin.shell: >
       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
     args:
-      creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
+      creates: "/home/joseph/.nvm/nvm.sh"
 
   - name: Clone dotfiles to home directory
     ansible.builtin.git:
