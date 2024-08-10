@@ -20,6 +20,12 @@
       state: latest
       update_cache: yes
 
+  - name: Install nvm
+    ansible.builtin.shell: >
+      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+    args:
+      creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
+
   - name: Clone dotfiles to home directory
     ansible.builtin.git:
       repo: "https://github.com/hyunchol-jun/.dotfiles.git"
