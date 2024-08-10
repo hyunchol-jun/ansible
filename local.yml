@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   connection: local
+  become: true
 
   tasks:
   - name: Install core packages
@@ -23,6 +24,8 @@
     ansible.builtin.shell: >
       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
     args:
+      executable: /bin/bash
+      chdir: "/home/joseph"
       creates: "/home/joseph/.nvm/nvm.sh"
 
   - name: Clone dotfiles to home directory
