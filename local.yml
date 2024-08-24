@@ -23,7 +23,7 @@
 
   - name: Install nvm
     ansible.builtin.shell: >
-      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash >> /home/joseph/output.txt
+      (curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash) >> /home/joseph/output.txt
     args:
       creates: "/home/joseph/.nvm/nvm.sh"
 
