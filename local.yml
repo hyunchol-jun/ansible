@@ -33,6 +33,3 @@
     ansible.builtin.git:
       repo: "https://github.com/hyunchol-jun/.dotfiles.git"
       dest: "/home/joseph/.dotfiles"
-      executable: /bin/bash
-      clone: yes
-      update: yes
