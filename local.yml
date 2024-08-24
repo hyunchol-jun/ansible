@@ -17,15 +17,14 @@
       name:
         - htop
         - tmux
+        - nvim
       state: latest
       update_cache: yes
 
   - name: Install nvm
     ansible.builtin.shell: >
-      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash >> nvmlog.txt
     args:
-      executable: /bin/bash
-      chdir: "/home/joseph"
       creates: "/home/joseph/.nvm/nvm.sh"
 
   - name: Clone dotfiles to home directory
