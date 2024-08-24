@@ -51,7 +51,7 @@
       validate: 'visudo -cf %s'
 
   - name: Install chrome using yay
-    kewlfft.aur.aur:
+    aur:
       use: yay
       name:
         - chrome
