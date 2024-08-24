@@ -30,7 +30,7 @@
     become_user: joseph
 
   - name: Install lastest node
-    ansible.builtin.shell: nvm install node
+    ansible.builtin.shell: source /home/joseph/.nvm/nvm.sh && nvm install node
     become: yes
     become_user: joseph
 
