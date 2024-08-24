@@ -40,3 +40,8 @@
       dest: "/home/joseph/.dotfiles"
       clone: yes
       update: yes
+
+  - name: stow dotfiles
+    ansible.builtin.shell: stow .
+    args:
+      chdir: "/home/joseph/.dotfiles/"
