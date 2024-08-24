@@ -34,6 +34,12 @@
     become: yes
     become_user: joseph
 
+  - name: Install chrome using yay
+    kewlfft.aur.aur:
+      use: yay
+      name:
+        - chrome
+
   - name: Clone dotfiles to home directory
     ansible.builtin.git:
       repo: "https://github.com/hyunchol-jun/.dotfiles.git"
